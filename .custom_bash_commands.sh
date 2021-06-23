@@ -1,5 +1,8 @@
 #!/bin/bash
-python ~/complete/main.py
+
+# To get Pythpn to work in GitBash use winpty command
+#source https://medium.com/@presh_onyee/getting-python-shell-to-work-on-git-bash-windows-mac-linux-5fdfc49409e4
+winpty python ~/complete/main.py
 ITER=0
 for item in $@
 do
@@ -18,13 +21,26 @@ done
 
 if [[ $1 == "add" ]]
 then
-    python ~/complete/add.py $title $username
+    winpty python ~/complete/add.py $title $username
 elif [[ $1 == "copy" ]]
 then
-    python ~/complete/copy.py $title
+    winpty python ~/complete/copy.py $title
 elif [[ $1 == "edit" ]]
 then
-    python ~/complete/edit.py $title
+    winpty python ~/complete/edit.py $title
+else
+	echo "Info: "
+	echo "      passman add:        Neue Titel und Username hinzufügen."
+	echo " "
+	echo "                    -title: Flag, um den Title zu identifizieren"
+	echo "                    -username: Flag, um den Username zu identifizieren"
+	echo "---> Beispiel: passman add -title Facebook -username Karl1990"
+	echo " "
+	echo " "
+	echo "      passman copy:       Passwort mit Titel kopieren"
+	echo " "
+	echo "              -title: Flag, um den Title zu identifizieren"
+	echo "---> Beispiel: passman copy -title Facebook"
 fi
 
 

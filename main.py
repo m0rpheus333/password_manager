@@ -15,7 +15,6 @@ data_now = datetime.now()
 a_file = open(home_path + "\complete\db.json", "r")
 json_obj = json.load(a_file)
 
-
 #Funktion für Speicherung allen änderungen und manipulationen in JSON file
 def write_to_db():
   a_file = open(home_path + "\complete\db.json", "w")
@@ -89,7 +88,6 @@ def check_password():
     json_obj['mpw']['date'] = datetime.timestamp(datetime.now())
     write_to_db()
     print('---> Master ok')
-    sys.exit(1)
   else:
     ask = input('Password ist falsh. Nochmals versuchen? y/n ')
     if ask == 'y':
@@ -116,5 +114,5 @@ def new_user():
       print("Du bist neu hier \nLass uns neue Master Passwort erstellen")
       write_new_master_password()
       choose_mode()
-new_user()
+# new_user()
 handle_password()
