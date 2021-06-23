@@ -4,9 +4,8 @@
 
 # Installation on Windows
 
-Grundvoraussetzungen
-
-> Install Python
+###Grundvoraussetzungen:
+> Python
 > Git Bash
 
 Zuerst öffnen Sie Command Line und führen Sie den Command aus
