@@ -4,7 +4,7 @@
 
 # Installation on Windows
 
-###Grundvoraussetzungen:
+##Grundvoraussetzungen:
 > Python
 
 > Git Bash
