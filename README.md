@@ -6,6 +6,7 @@
 
 ###Grundvoraussetzungen:
 > Python
+
 > Git Bash
 
 Zuerst öffnen Sie Command Line und führen Sie den Command aus
