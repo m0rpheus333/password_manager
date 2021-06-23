@@ -3,6 +3,15 @@ import sys
 import json
 import random
 from pathlib import Path
+from signal import signal, SIGINT
+from sys import exit
+
+
+
+#When das Programm 
+
+
+
 
 # Wir öndern den sys path to HOME, damit der python file des Dateisystem finden kann.
 home_path = str(Path.home())
@@ -11,12 +20,12 @@ sys.path.insert(1, home_path)
 
 #Die Funktion für Speicherung allen geänderten, maipulierten Daten.
 def write_to_db():
-  a_file = open(home_path + "\complete\db.json", "w")
+  a_file = open(home_path + "\pmanager\db.json", "w")
   json.dump(json_obj, a_file)
   a_file.close()
 
 #Eröffnung der db.json file und konvertierung in Python Dictinary
-a_file = open(home_path + "\complete\db.json", "r")
+a_file = open(home_path + "\pmanager\db.json", "r")
 json_obj = json.load(a_file)
 
 
@@ -82,8 +91,6 @@ try:
   new_pw = create_obj(arguments[1], arguments[2],pw)
   if check_repeat(arguments[1], "title") == False:
     print("Error: Der eingegebene Titel ist bereits vorhanden, bitte ändern Sie den Titel")
-  elif check_repeat(arguments[2], "username"):
-    print("Error: Der eingegebene Username ist bereits vorhanden, bitte ändern Sie den Username")
   else:
     json_obj['pwrds'].append(new_pw)
 except:

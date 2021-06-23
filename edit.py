@@ -8,7 +8,7 @@ from datetime import datetime
 home_path = str(Path.home())
 sys.path.insert(1, home_path)
 
-a_file = open(home_path + "\complete\db.json", "r")
+a_file = open(home_path + "\pmanager\db.json", "r")
 json_obj = json.load(a_file)
 
 array = json_obj['pwrds']
@@ -30,7 +30,7 @@ def eintrag_loeschen():
 
 
 def write_to_db():
-  a_file = open(home_path + "\complete\db.json", "w")
+  a_file = open(home_path + "\pmanager\db.json", "w")
   json.dump(json_obj, a_file)
   a_file.close()
 

@@ -12,12 +12,12 @@ home_path = str(Path.home())
 # Wir öndern den sys path to HOME, damit der python file des Dateisystem finden kann.
 sys.path.insert(1, home_path)
 data_now = datetime.now()
-a_file = open(home_path + "\complete\db.json", "r")
+a_file = open(home_path + "\pmanager\db.json", "r")
 json_obj = json.load(a_file)
 
 #Funktion für Speicherung allen änderungen und manipulationen in JSON file
 def write_to_db():
-  a_file = open(home_path + "\complete\db.json", "w")
+  a_file = open(home_path + "\pmanager\db.json", "w")
   json.dump(json_obj, a_file)
   a_file.close()
 

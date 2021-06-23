@@ -10,7 +10,7 @@ home_path = str(Path.home())
 sys.path.insert(1, home_path)
 copier = Tk()
 
-a_file = open(home_path + "\complete\db.json", "r")
+a_file = open(home_path + "\pmanager\db.json", "r")
 json_obj = json.load(a_file)
 
 arr = json_obj['pwrds']

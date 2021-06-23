@@ -29,7 +29,7 @@ if [[ -z $1 ]]
 then
     usage
 else
-    winpty python ~/complete/main.py
+    winpty python ~/pmanager/main.py
 fi
 
 ITER=0
@@ -52,13 +52,13 @@ done
 
 if [[ $1 == "add" ]]
 then
-    winpty python ~/complete/add.py $title $username
+    winpty python ~/pmanager/add.py $title $username
 elif [[ $1 == "copy" ]]
 then
-    winpty python ~/complete/copy.py $title
+    winpty python ~/pmanager/copy.py $title
 elif [[ $1 == "edit" ]]
 then
-    winpty python ~/complete/edit.py $title
+    winpty python ~/pmanager/edit.py $title
 elif [[ $1 == 'usage' ]]
 then
     usage
