@@ -4,6 +4,8 @@ import json
 import pyperclip
 from tkinter import Tk
 from pathlib import Path
+from signal import signal, SIGINT
+
 
 # Wir öndern den sys path to HOME, damit der python file des Dateisystem finden kann.
 home_path = str(Path.home())
@@ -23,11 +25,24 @@ for item in arr:
     username = item['username']
     password = item['password']
 
+
+
+
+#Wenn das Programm durch Ctrl+C abgebrochen wird
+#sollen wir den Clipboard leeren
+#  source: https://www.devdungeon.com/content/python-catch-sigint-ctrl-c
+
+def handler(signal_received, frame):
+    print('CTRL-C detected. Passwort in Clipboard wird gelöscht')
+    pyperclip.copy(' ')
+
+
 def clip(password):
   pyperclip.copy(password)
   print("---> You have 30 sek till i empty the clipboard")
+  signal(SIGINT, handler)
   time.sleep(30)
-  pyperclip.copy('empty')
+  pyperclip.copy(' ')
 
 print("Username: " + username + " | password copied to clipboard")
 clip(password)

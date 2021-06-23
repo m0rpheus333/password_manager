@@ -3,13 +3,6 @@ import sys
 import json
 import random
 from pathlib import Path
-from signal import signal, SIGINT
-from sys import exit
-
-
-
-#When das Programm 
-
 
 
 
