@@ -10,12 +10,16 @@ Grundvoraussetzungen
 > Git Bash
 
 Zuerst öffnen Sie Command Line und führen Sie den Command aus
-```pip install bcrypt```
+```Bash
+pip install bcrypt
+```
 
 File `install.sh` herunterladen.
 Öffnen Sie der Ordner, wo sie `înstall.sh` befindet und führen Sie den Command aus
 
-```bash install.sh```
+```Bash
+bash install.sh
+```
 
 
 Geben Sie in das Terminal passman usage ein, um die Informations-Box zu öffnen
