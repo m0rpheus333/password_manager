@@ -71,11 +71,23 @@ def create_obj(title, username, password):
   return acc_obj
 
 
+def check_repeat(title, key):
+  for item in json_obj['pwrds']:
+    if item[key] == title:
+      return False
+  return True
+
 try:
   arguments = sys.argv
   new_pw = create_obj(arguments[1], arguments[2],pw)
+  if check_repeat(arguments[1], "title") == False:
+    print("Error: Der eingegebene Titel ist bereits vorhanden, bitte ändern Sie den Titel")
+  elif check_repeat(arguments[2], "username"):
+    print("Error: Der eingegebene Username ist bereits vorhanden, bitte ändern Sie den Username")
+  else:
+    json_obj['pwrds'].append(new_pw)
 except:
   print("Es ist ein Error erstanden. Bitte geben sie 'passman usage' ein.")
-json_obj['pwrds'].append(new_pw);
+
 
 write_to_db()

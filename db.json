@@ -1,1 +1,11 @@
-{"mpw": {"pw": "$2b$12$0nMkBN0gmfxzj9XFMB1sM.fc3CzUONqTKbnve7dkTrr4b.0Erdr.O", "salt": "$2b$12$0nMkBN0gmfxzj9XFMB1sM.fc3CzUONqTKbnve7dkTrr4b.0Erdr.O", "mode": null, "minutes": 3, "date": 1624463829.353537, "generator": {"len": 20, "gb": true, "kb": true, "zh": true, "zf": true}}, "pwrds": [{"title": "facebook1", "username": "sarvar2", "password": "Q(WZMn;*CUr|Q>W$#KB^"}, {"title": "tweeter", "username": "s5", "password": "Df.AIY]o[Q!U8bS;H=]Q"}, {"title": "sarvar", "username": "momo", "password": "EG`QJBZ|3-1yRI3qD_IO"}, {"title": "sarvar", "username": "bobo", "password": "lAfJ9yG[{:&wTEs]3b=X"}, {"title": "sarvar", "username": "patrik1", "password": "SX7`LeHXN)GRBa2IHU7D"}]}
+{
+  "mpw": {
+    "pw": null,
+    "salt": null,
+    "mode": null,
+    "minutes": null,
+    "date": null,
+    "generator": { "len": null, "gb": null, "kb": null, "zh": null, "zf": null }
+  },
+  "pwrds": []
+}
