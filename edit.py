@@ -4,6 +4,7 @@ from typing import ItemsView
 import bcrypt
 from pathlib import Path
 from datetime import datetime
+import getpass
 
 home_path = str(Path.home())
 sys.path.insert(1, home_path)
@@ -35,8 +36,8 @@ def write_to_db():
   a_file.close()
 
 def write_new_master_password():
-  pw = input("Neue Master Passowrd: ")
-  password = input("Password wiederholen: ")
+  pw = getpass("Neue Master Passowrd: ")
+  password = getpass("Password wiederholen: ")
   if(pw == password):
     salt = bcrypt.hashpw(bytes(password, encoding='utf-8'), bcrypt.gensalt())
     pw1 = bcrypt.hashpw(bytes(password, encoding='utf-8'), salt)
@@ -96,7 +97,7 @@ print('Wilkommen in Settings. Bitte wählen sie enine Option: ')
 print("1. Master-Passwort ändern \n2. Eintrag löschen\n3. Alle Einträge auflisten \n4. Passwort Generator Modus ändern")
 mode = int(input("--> Nummer: "))
 if mode == 1:
-  best = input("Bitte bestätige, dass du dein Master-Passwort ändern willst. (Y/N)")
+  best = input("Bitte bestätige, dass du dein Master-Passwort ändern willst. (Y/N) ")
   if best.lower() == 'y':
     write_new_master_password()
 elif mode == 2:
