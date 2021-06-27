@@ -2,9 +2,15 @@
 :seedling: University Project to manage your passwords via bash
 
 
+
+
+
+
+
+
 # Installation on Windows
 
-##Grundvoraussetzungen:
+## Grundvoraussetzungen:
 > Python
 
 > Git Bash
