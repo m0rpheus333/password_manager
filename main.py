@@ -103,7 +103,6 @@ def check_password():
 
 
 
-
 # überprüft ob es übrhaupt User gibt
 def new_user():
     if json_obj['mpw']['pw'] == None:
@@ -116,6 +115,7 @@ def new_user():
 
 # Haupt Funktion. Überüft ob die Zeit und führt die Funktion Check_password aus
 # wird bei jeder Befehl asugefuehrt
+# 
 def handle_password():
   new_user()
   if json_obj['mpw']['minutes'] != None:
@@ -125,7 +125,5 @@ def handle_password():
       check_password()
     else:
       print("Minutes to ask a master password", difference)
-  else:
-    new_user()
 
 handle_password()

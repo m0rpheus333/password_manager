@@ -15,11 +15,11 @@ array = json_obj['pwrds']
 
 
 def eintrag_loeschen():
-  best = input("Bitte bestätige, dass du den Eintrag löschen willst. (Y/N)")
+  best = input("Bitte bestätige, dass du den Eintrag löschen willst. (Y/N) ")
   if best.lower() == 'y':
     try:
       title = sys.argv[1]
-      print("Ertrag mit Titel: " + title + "| wird gelöscht")
+      print("Ertrag mit Titel: " + title + " wird gelöscht")
       for elem in array:
         if elem['title'] == title:
           json_obj['pwrds'].pop(array.index(elem))
