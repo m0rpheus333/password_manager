@@ -4,7 +4,7 @@ from typing import ItemsView
 import bcrypt
 from pathlib import Path
 from datetime import datetime
-import getpass
+from getpass import getpass
 
 home_path = str(Path.home())
 sys.path.insert(1, home_path)

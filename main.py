@@ -124,6 +124,6 @@ def handle_password():
     if (difference.total_seconds() / 60) > int(json_obj['mpw']['minutes']):
       check_password()
     else:
-      print("Minutes to ask a master password", difference.total_seconds / 60)
+      print("Minutes to ask a master password", difference.total_seconds() / 60)
 
 handle_password()

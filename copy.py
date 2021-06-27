@@ -33,6 +33,7 @@ for item in arr:
 def handler(signal_received, frame):
     print('CTRL-C detected. Passwort in Clipboard wird gelöscht')
     pyperclip.copy(' ')
+    sys.exit(1)
 
 def clip(password):
   pyperclip.copy(password)
